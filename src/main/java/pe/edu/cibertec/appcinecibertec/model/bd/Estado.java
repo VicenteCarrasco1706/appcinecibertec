@@ -27,7 +27,8 @@ public class Estado {
 	private String descestado;
 	
 	//opcional
-	@OneToMany(mappedBy = "estado", cascade =  CascadeType.ALL, orphanRemoval = true)
-	private List<Sala> salaList;
+	
+	/*@OneToMany(mappedBy = "estado", cascade =  CascadeType.ALL, orphanRemoval = true)
+	private List<Sala> salaList;*/
 	
 }

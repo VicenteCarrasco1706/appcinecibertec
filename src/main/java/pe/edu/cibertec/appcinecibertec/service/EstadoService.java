@@ -14,13 +14,13 @@ public class EstadoService {
 	@Autowired
 	private EstadoRepository estadoRepository;
 	
-	//Listar
-	public List<Estado> listarEstado(){
+	public List<Estado> listarEstados(){
 		return estadoRepository.findAll();
 	}
-	//Insertar
+	
 	public void registrarEstado(Estado estado) {
 		estadoRepository.save(estado);
 	}
 	
+
 }
