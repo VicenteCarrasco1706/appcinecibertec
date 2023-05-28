@@ -36,7 +36,10 @@
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-danger">
+					<button type="button" class="btn btn-danger btneliminarsala"
+						th:data-idsala="${sala.idsala}"
+						th:data-descsala="${sala.descsala}">
+					
 						<i class="fas fa-trash"></i>
 					</button>
 				</td>
@@ -44,7 +47,7 @@
 		</tbody>
 	</table>
 
-	<!-- Modal -->
+	<!-- Modal Registro / actualización sala-->
 	<div class="modal fade" id="modalSala" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -85,6 +88,33 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Modal Eliminar SALA -->
+	<div class="modal fade" id="modalEliminarSala" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Modal
+						Eliminar Sala</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">		
+					<label id="mensajeeliminar"></label>
+					<input type="hidden" id="hddideliminarsala"
+						value="0">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-primary"
+						id="btneliminar">Eliminar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>
